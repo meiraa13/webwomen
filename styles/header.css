@@ -1,0 +1,18 @@
+header {
+
+    height: 35rem;
+    background-image: url(../assets/img/header-bg.png);
+    background-size: cover;
+    width: 100%;
+
+}
+
+.div-header {
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var( --color-grey-6);
+
+}

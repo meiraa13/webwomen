@@ -1,0 +1,59 @@
+.div-main {
+
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+
+
+.section-1 {
+    
+    width: 60%;
+   
+}
+
+.card {
+    background-color: var(--color-grey-6);
+    border-radius: var(--radius-default);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-2 {
+
+    width: 40%;
+   
+}
+
+.vagas-aside {
+    background-color: var(--color-grey-6);
+    padding: 20px;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card-2 {
+    background-color: var(--color-grey-6);
+    padding: 20px;
+    margin-bottom: 2px;
+
+}
+
+
+@media(max-width:900px){
+
+    .div-main {
+        flex-wrap: wrap;
+    }
+    .section-1 {
+        width: 100%;
+    }
+    .section-2 {
+        width: 100%;
+    }
+
+
+
+}

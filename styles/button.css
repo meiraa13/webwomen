@@ -1,0 +1,43 @@
+.secao-vagas {
+
+    width: fit-content;
+    border-style: none;
+    padding: 10px 25px;
+    border-radius: var(--radius-default);
+    background-color: var(--color-brand-2);
+    color: var( --color-grey-6);
+    cursor: pointer;
+
+}
+
+.modalidade {
+
+    border-style: none;
+    background-color: var(--color-grey-3);
+    padding: 10px;
+    border-radius: var(--radius-default);
+
+}
+
+.candidatar {
+    
+    border-style: none;
+    background-color: var(--color-brand-1);
+    padding: 10px 20px;
+    border-radius: var(--radius-default);
+    color: var(--color-grey-6);
+    cursor: pointer;
+
+}
+
+.lixeira {
+
+    background-image: url(../assets/img/trash.png);
+    height: 30px;
+    width: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-style: none;
+    border-radius: var(--radius-default);
+    cursor: pointer;
+}
