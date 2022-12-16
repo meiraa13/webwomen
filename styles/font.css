@@ -1,0 +1,11 @@
+.webwomen {
+
+    font-size: var(--title-4) ;
+}
+
+.lugar {
+
+    font-size: var(--title-3);
+    color: var(--color-grey-3);
+
+}
