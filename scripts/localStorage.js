@@ -9,8 +9,6 @@ function jobExists (job){
 }
 
 
-
-
 function removeFromLocalStorage(job){
 
     let jobExist = jobExists(job)
@@ -23,5 +21,26 @@ function removeFromLocalStorage(job){
 
     localStorage.setItem('Webwomen', JSON.stringify(favoriteJobs))
 
+}
+
+function favoriteAndRemove(job, button){
+
+    const jobExist = jobExists(job)
+    let favoriteJobs = getLocalStorage()
+
+   
+    if(jobExist <0){
+        favoriteJobs.push(job)
+        button.innerText = 'Remover Candidatura'
+
+      
+    }else {
+
+        favoriteJobs.splice(jobExist, 1)
+
+        button.innerText = 'Candidatar'
+    }
+
+    localStorage.setItem('Webwomen', JSON.stringify(favoriteJobs))
 }
 

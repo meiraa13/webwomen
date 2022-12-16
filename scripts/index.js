@@ -45,10 +45,19 @@ function createJobs(job){
 
     button2.addEventListener('click',()=>{
         
+       favoriteAndRemove(job, button2)
+
+       let teste = JSON.parse(localStorage.getItem('Webwomen'))
+
+       let aside = document.querySelector('.aside')
+       aside.innerHTML = ''
        
-        favoriteAndRemove(job, button2)
+       renderCart(teste)
+   
+
     })
 
+    
 
     div1.append(p1, p2)
     div2.append(button1, button2)
@@ -60,45 +69,32 @@ function createJobs(job){
 
 }
 
-function favoriteAndRemove(job, button){
+function persistLocalStorage (){
 
-    const jobExist = jobExists(job)
-    let favoriteJobs = getLocalStorage()
+    let array = JSON.parse(localStorage.getItem('Webwomen'))
+    if(array.length != 0){
 
-     let aside = document.querySelector('.aside')
-     
-     aside.innerHTML = ''
-
-    if(jobExist <0){
-        favoriteJobs.push(job)
-        button.innerText = 'Remover Candidatura'
-
-        favoriteJobs.forEach((job)=>{
-
-            let template = createCard(job, button)
-            aside.appendChild(template)
-
-        })
-    }else {
-
-        favoriteJobs.splice(jobExist, 1)
-
-          favoriteJobs.forEach((job)=>{
-
-            let template = createCard(job, button)
-            aside.appendChild(template)
-
-        })
-        button.innerText = 'Candidatar'
+        renderCart(array)
+        
     }
 
-    localStorage.setItem('Webwomen', JSON.stringify(favoriteJobs))
+}
+persistLocalStorage()
+
+
+function renderCart(array){
+
+    let aside = document.querySelector('.aside')
+
+    array.forEach((item)=>{
+
+        let template = createCard(item)
+        aside.appendChild(template)
+    })
+
 }
 
-
-
-
-function createCard(job, btn){
+function createCard(job){
     const {id, title, enterprise, location, description, modalities} = job
 
     let divMain = document.createElement('div')
